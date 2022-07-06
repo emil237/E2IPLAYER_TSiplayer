@@ -16,8 +16,6 @@ URL='https://raw.githubusercontent.com/emil237/E2IPLAYER_TSiplayer/main'
 PYTHON_VERSION=$(python -c"import sys; print(sys.hexversion)")
 
 #########################
-VERSION=$(wget $URL/E2IPLAYER-PY3-DREAMSATPANEL/e2iplayer-py3.sh -qO- | grep 'version=' | cut -d "=" -f2- | sed 's/^"\(.*\)".*/\1/')
-
 ########################
 if [ -f /etc/opkg/opkg.conf ]; then
     STATUS='/var/lib/opkg/status'
