@@ -20,8 +20,7 @@ PYTHON_VERSION=$(python -c"import platform; print(platform.python_version())")
 # SPA=/usr/bin/OpenSPA.info
 
 #########################
-VERSION=$(wget $URL/E2IPLAYER-PY3-DREAMSATPANEL/e2iplayer-py3.sh -qO- | grep 'version=' | cut -d "=" -f2- | sed 's/^"\(.*\)".*/\1/')
-
+VERSION=VERSION=$(wget $MY_URL/version -qO- | cut -d "=" -f2-)
 ########################
 if [ -f /etc/opkg/opkg.conf ]; then
     STATUS='/var/lib/opkg/status'
